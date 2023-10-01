@@ -1,0 +1,52 @@
+.formTask {
+  max-width: 736px;
+  margin-inline: auto;
+  display: flex;
+  padding: 2rem;
+  margin-top: -4.9rem;
+  form {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      flex: 1;
+      padding: 1rem;
+      background-color: var(--gray-500);
+      border-radius: 8px;
+      border: 1px solid var(--gray-700);
+      color: var(--gray-100);
+      outline: none;
+
+      &::placeholder {
+        color: var(--gray-300);
+      }
+
+      &:focus {
+        background: var(--gray-500);
+        border: 1px solid var(--purple-dark);
+      
+      }
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: var(--blue-dark);
+      border: none;
+      color: var(--gray-100);
+      font-size: 0.875rem;
+      font-weight: bold;
+      transition: all 0.3s ease-in;
+      &:hover {
+        background-color: var(--blue);
+      }
+    }
+  }
+}
+
+
+
