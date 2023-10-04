@@ -15,7 +15,10 @@ const Task = ({tasks, onDeleteTask}: TaskProps)  => {
   
   function handleDeleteTask(task: string) {
     onDeleteTask(task)
-    setTaskComplete((state) => state - 1)
+
+    if(taskComplete !== 0) {
+      setTaskComplete((state)  => state - 1)
+    }
 
   }
 
@@ -94,8 +97,8 @@ const Task = ({tasks, onDeleteTask}: TaskProps)  => {
       </header>
       {isTask ? (
      <div>
-      {tasks.map((task) => (
-        <div key={task} className={styles.taskContainer}>
+      {tasks.map((task, index) => (
+        <div key={index} className={styles.taskContainer}>
           <div id='contentTask' className={styles.contentTask} 
           onClick={handleCompleteTask}>
 

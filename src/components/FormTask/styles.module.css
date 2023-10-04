@@ -1,0 +1,48 @@
+.formTask {
+  max-width: 736px;
+  margin-inline: auto;
+  display: flex;
+  padding: 2rem;
+  margin-top: -4.9rem;
+}
+.formTask form {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+.formTask form input {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  color: var(--gray-100);
+  outline: none;
+}
+.formTask form input::-moz-placeholder {
+  color: var(--gray-300);
+}
+.formTask form input::placeholder {
+  color: var(--gray-300);
+}
+.formTask form input:focus {
+  background: var(--gray-500);
+  border: 1px solid var(--purple-dark);
+}
+.formTask form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--blue-dark);
+  border: none;
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+.formTask form button:hover {
+  background-color: var(--blue);
+}/*# sourceMappingURL=styles.module.css.map */

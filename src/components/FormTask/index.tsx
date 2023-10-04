@@ -15,7 +15,8 @@ const FormTask = () => {
   }
 
   function handleNewTask(e: ChangeEvent<HTMLInputElement>) {
-    setNewTask(e.target.value)
+    const newTask = e.target.value
+    setNewTask(newTask)
   }
 
   function deleteTask(taskDelete:string) {
@@ -23,17 +24,15 @@ const FormTask = () => {
     setTasks(taskFilter)
   }
 
-
-  
   return (
    <>
      <div className={styles.formTask}>
       <form onSubmit={handleTask}>
-        <input placeholder='Adicione uma nova tarefa' type="text" value={newTask} onChange={handleNewTask} />
-        <button type='submit'>Criar <PlusCircle size={16} weight="bold" /></button>
+        <input required placeholder='Adicione uma nova tarefa' type="text" value={newTask} onChange={handleNewTask} />
+        <button  type='submit'>Criar <PlusCircle size={16} weight="bold" /></button>
       </form>
     </div>
-    <Task tasks={tasks}  onDeleteTask={deleteTask}/>
+    <Task tasks={tasks} onDeleteTask={deleteTask}  />
    </>
   )
 }
